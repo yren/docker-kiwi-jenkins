@@ -1,0 +1,3 @@
+parameterized-trigger:2.29
+jquery:1.11.2-0
+build-pipeline-plugin:1.4.9

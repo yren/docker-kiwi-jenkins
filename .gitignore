@@ -1,0 +1,10 @@
+/data/jenkins_home/*
+!/data/jenkins_home/jobs
+/data/jenkins_home/jobs/*/*
+!**/config.xml
+.project
+.settings
+**/.DS_Store
+**/*~
+**/*.swp
+
