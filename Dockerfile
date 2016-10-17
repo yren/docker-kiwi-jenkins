@@ -22,7 +22,7 @@ User jenkins
 # Install plugins
 COPY data/plugins.txt /usr/share/jenkins/ref/plugins.txt
 # set jenkins executor number
-COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
+COPY data/executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
 RUN set -x; \
   /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
 
