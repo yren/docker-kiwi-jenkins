@@ -43,3 +43,6 @@ yren/kiwi-jenkins:0.1
 * Manage Jenkins - Configure Global Security - check 'Enable Security', select 'Jenkins own database', check 'Allow user to sign up'
 * sign up a user
 * user 'Matrix based security'
+
+## access url
+http://jenkins.lokvin.me/
