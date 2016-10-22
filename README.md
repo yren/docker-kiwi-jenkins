@@ -24,9 +24,9 @@ docker pull yren/kiwi-jenkins:0.1
 
 ## start container
 ```
-mkdir -p $PWD/data/jenkins_home
-sudo chmod -R 777 $PWD/data/jenkins_home
-HOST_J_HOME="$PWD/data/jenkins_home"
+sudo mkdir -p /rt/jenkins_home
+sudo chmod -R 777 /rt/jenkins_home
+HOST_J_HOME="/rt/jenkins_home"
 ```
 
 ```
@@ -38,3 +38,8 @@ docker run -d --name="jenkins" \
 -e "HOST_J_HOME=${HOST_J_HOME}" \
 yren/kiwi-jenkins:0.1
 ```
+
+## jenkins security
+* Manage Jenkins - Configure Global Security - check 'Enable Security', select 'Jenkins own database', check 'Allow user to sign up'
+* sign up a user
+* user 'Matrix based security'
