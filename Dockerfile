@@ -11,11 +11,14 @@ RUN set -x; \
   && echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /etc/apt/sources.list.d/docker.list \
   && apt-get update \
   && apt-get install -y docker-engine 
+  && apt-get install -y sudo \
+  && rm -rf /var/lib/apt/lists/*
+RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 RUN set -x; \
   usermod -a -G docker jenkins \
   && groupadd -g 992 centosDocker \
-  && usermod -a -G centosDocker jenkins
+  && usermod -a -G 992 jenkins
 
 User jenkins
 
