@@ -46,3 +46,16 @@ yren/kiwi-jenkins:0.1
 
 ## access url
 http://jenkins.lokvin.me/
+
+## jenkins build job
+```
+#!/bin/bash
+echo =====================
+echo BUILD $PROJECT ${BRANCH}
+echo =====================
+
+docker run --rm  -v /var/run/docker.sock:/var/run/docker.sock \
+-v /home/ec2-user/.m2/repository:/root/.m2/repository \
+-i yren/build-box:0.1 \
+sh -e /rt/toolkit/stage.sh  ${PROJECT} ${BRANCH} ${BuildDependence}
+```
