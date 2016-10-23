@@ -51,11 +51,11 @@ http://jenkins.lokvin.me/
 ```
 #!/bin/bash
 echo =====================
-echo BUILD $PROJECT ${BRANCH}
+echo BUILD ${project} ${branch}
 echo =====================
 
 docker run --rm  -v /var/run/docker.sock:/var/run/docker.sock \
 -v /home/ec2-user/.m2/repository:/root/.m2/repository \
 -i yren/build-box:0.1 \
-sh -e /rt/toolkit/stage.sh  ${PROJECT} ${BRANCH} ${BuildDependence}
+sh -e /rt/toolkit/stage.sh  ${project} ${branch} ${buildDependence}
 ```
