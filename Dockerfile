@@ -13,7 +13,9 @@ RUN set -x; \
   && apt-get install -y docker-engine 
 
 RUN set -x; \
-  usermod -a -G docker jenkins
+  usermod -a -G docker jenkins \
+  && groupadd -g 992 centosDocker \
+  && usermod -a -G centosDocker jenkins
 
 User jenkins
 
