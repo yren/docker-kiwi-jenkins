@@ -4,21 +4,15 @@ MAINTAINER Yufei <renyufei@gmail.com>
 # Install docker
 User root
 RUN set -x; \
-  apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 \
-  --recv-keys 58118E89F3A912897C070ADBF76221572C52609D \
-  && apt-get update \
-  && apt-get install -y apt-transport-https \
-  && echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /etc/apt/sources.list.d/docker.list \
-  && apt-get update \
-  && apt-get install -y docker-engine \
-  && apt-get install -y sudo \
+  apt-get install -y sudo \
   && rm -rf /var/lib/apt/lists/*
 RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 RUN set -x; \
-  usermod -a -G docker jenkins \
-  && groupadd -g 992 centosDocker \
-  && usermod -a -G 992 jenkins
+  groupadd -g 497 docker \
+  && usermod -a -G docker jenkins
+
+ADD data/docker/docker-1.11.2.tgz /usr/bin/
 
 User jenkins
 

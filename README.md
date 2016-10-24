@@ -36,7 +36,7 @@ docker run -d --name="jenkins" \
 -v $HOST_J_HOME:/var/jenkins_home/ \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -e "HOST_J_HOME=${HOST_J_HOME}" \
-yren/kiwi-jenkins:0.1
+yren/kiwi-jenkins:0.3
 ```
 
 ## jenkins security
