@@ -4,7 +4,9 @@ MAINTAINER Yufei <renyufei@gmail.com>
 # Install docker
 User root
 RUN set -x; \
-  apt-get install -y sudo \
+  echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /etc/apt/sources.list.d/docker.list \
+  && apt-get update \
+  && apt-get install -y sudo \
   && rm -rf /var/lib/apt/lists/*
 RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
