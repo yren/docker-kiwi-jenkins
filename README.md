@@ -6,7 +6,7 @@ https://hub.docker.com/_/jenkins/
 ## Build
 ```
 docker build --rm -t yren/kiwi-jenkins .
-docker tag yren/kiwi-jenkins yren/kiwi-jenkins:0.1
+docker tag yren/kiwi-jenkins yren/kiwi-jenkins:0.3
 ```
 
 ## Push to docker hub
