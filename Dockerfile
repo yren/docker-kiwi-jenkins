@@ -18,7 +18,7 @@ RUN set -x; \
   groupadd -g 497 docker \
   && usermod -a -G docker jenkins
 
-ADD data/docker/docker-1.11.2.tgz /usr/bin/
+ADD target/data/docker/* /usr/bin/
 
 User jenkins
 

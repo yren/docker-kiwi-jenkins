@@ -31,7 +31,7 @@ HOST_J_HOME="/rt/jenkins_home"
 
 ```
 docker run -d --name="jenkins" \
--p 8080:8080 -p 60000:50000 \
+-p 80:8080 -p 60000:50000 \
 --restart=always \
 -v $HOST_J_HOME:/var/jenkins_home/ \
 -v /var/run/docker.sock:/var/run/docker.sock \
