@@ -9,7 +9,7 @@ rm -rf target
 mkdir -p target/data
 tar -zxvf data/docker/docker-1.11.2.tgz -C target/data/
 
-imageName=yren/kiwi-jenkins
+imageName=kiwi-jenkins
 
 echo
 echo "**********************************************************************"
@@ -24,4 +24,4 @@ echo "**********************************************************************"
 echo "* docker push $imageName:$1 "
 echo "**********************************************************************"
 echo
-docker push $imageName:$1
+pushImageToDockerHub $imageName $1
