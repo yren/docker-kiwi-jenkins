@@ -11,7 +11,7 @@ rm -rf target
 mkdir -p target/data
 tar -zxvf data/docker/docker-1.11.2.tgz -C target/data/
 
-imageName=kiwi-jenkins
+imageName=jenkins
 
 echo
 echo "**********************************************************************"
