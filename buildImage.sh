@@ -1,4 +1,6 @@
 #!/bin/bash
+source /rt/toolkit/utils.sh
+
 if [ -z "$1" ]
   then
     echo "No branch supplied, should perform like : $0 0.1"
