@@ -11,15 +11,14 @@ rm -rf target
 mkdir -p target/data
 tar -zxvf data/docker/docker-1.11.2.tgz -C target/data/
 
-imageName=jenkins
+imageName=kiwi-jenkins
 
 echo
 echo "**********************************************************************"
 echo "* docker build $imageName:$1 "
 echo "**********************************************************************"
 echo
-docker build --rm -t $imageName:$1 .
-#docker build $dockerBuildArg --rm -t $dockerrepo/$imageName:$1 .
+docker build $dockerBuildArg --rm -t $dockerrepo/$imageName:$1 .
 
 echo
 echo "**********************************************************************"
